@@ -1,0 +1,55 @@
+* {
+    font-family: Courier;
+    margin:0 auto;
+    padding: 0;
+}
+@font-face {font-family: Futura;src: url("font.otf") format("opentype");}
+
+body{
+    width: 960px;
+}
+
+.hidden{
+    display: none!important;
+}
+
+#sup-red{
+    margin: 0 auto;
+    display: inline-block;
+    background-color:red;
+    padding: 10px;
+    font-family: Futura;
+    width: auto;
+    font-size: 68px;
+    text-align: center;
+    color: #fff;
+}
+
+#buy{padding: 5px;
+    font-size: 22px;;
+    margin:1.6rem;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+#ontee{
+    display: inline-block;
+    background-color:red;
+    padding: 5px;
+    font-family: Futura;
+    color: #fff;
+    margin-top: 80px!important;
+    font-size: 12px!important;    
+}
+
+#txt{padding: 10px;}
+
+.centerA{text-align: center;padding: 1.6rem;}
+.black{color:#fff;background-color: #000;border: 1px #eee solid;font-size: 22px;margin-top: 10px;transition: 0.5s;}
+.white{color:#000;background-color: #fff;border: 1px #000 solid;font-size: 22px;margin-top: 10px;transition: 0.5s;}
+
+.black:hover{border: 5px #eee solid;font-size: 24px;transition: 0.5s;}
+.white:hover{border: 5px #000 solid;font-size: 24px;transition: 0.5s;}
+
+.Wt{background-image: url(white.png);width: 400px;height: 400px;background-size: 400px;background-repeat: no-repeat;}
+.Bt{background-image: url(black.png);width: 400px;height: 400px;background-size: 400px;background-repeat: no-repeat;}

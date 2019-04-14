@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zoompreme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <br><br>
+    <h1>Make your bootleg supreme T-shirt and buy it pls:</h1>
+    <form action="" method=post>
+        <div class="centerA">
+            <input id="txt" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Write here...">
+        </div>
+
+        <div class="centerA">
+            <div id="sup-red">Your shitty text goes here.</div>
+        </div>
+
+        <br>
+        <div class="centerA">
+            <button class="btn black" id="black" type="button">Need a black one</button>
+            <button class="btn white" id="white" type="button">Need a white one</button></div>
+
+        <div id="showed" class="centerA hidden">
+            So, this is your t-shirt: <br>
+            <button type="submit" id="buy">&nbsp;<i class="fas fa-shopping-cart"></i> &nbsp;TAKE MY FUCKING MONEY&nbsp;</button>
+
+            <div id="tee">
+                <div id="ontee">Your shitty text goes here.</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        © FreethePizza - 2019
+    </form>
+</body>
+<script>
+    var text = document.getElementById("txt");
+    var btn = document.getElementsByClassName("btn");
+    var showed = document.getElementById("showed");
+    var tee = document.getElementById("tee");
+    text.addEventListener("input", change);
+
+
+    var showtee = function() {
+        var color = this.id;
+        showed.classList.remove("hidden")
+        if (color == "black") {
+            tee.classList.add("Bt");
+            tee.classList.remove("Wt");
+            document.getElementById("color-tee").value="black";
+        } else {
+            tee.classList.add("Wt");
+            tee.classList.remove("Bt");
+            document.getElementById("color-tee").value="white";
+        }
+    }
+
+    for (i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", showtee);
+    }
+
+    function change() {
+        var textvalue = text.value;
+        document.getElementById("sup-red").innerHTML = "&nbsp;" + textvalue + "&nbsp;";
+        document.getElementById("ontee").innerHTML = "&nbsp;" + textvalue + "&nbsp;";
+        if (textvalue.trim() == "") {
+            document.getElementById("sup-red").innerHTML = "&nbsp;" + "Your shitty text goes here." + "&nbsp;";
+            document.getElementById("ontee").innerHTML = "&nbsp;" + "Your shitty text goes here." + "&nbsp;";
+        }
+        return textvalue;
+    }
+
+</script>
+
+</html>
